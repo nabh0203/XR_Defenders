@@ -17,6 +17,14 @@ public class Mob : MonoBehaviour
     public float emissionIntensity = 5f;
 
     public ParticleSystem enviromentParticle;
+    public MeshRenderer holeMeshRenderer;
+
+    public float destroyDelay = 1f;
+    public bool isDestroyed = false;
+    public ParticleSystem destroyParticle;
+    public AudioSource destroyAudio;
+    public GameObject modelGameObject;
+
 
     private NavMeshAgent agent;
 
@@ -33,6 +41,10 @@ public class Mob : MonoBehaviour
         agent.speed *= Random.Range(0.8f, 1.5f);
 
         RandomColor();
+
+        //테스트용 코드
+
+        Invoke(nameof(Destroy), 3f);
     }
 
     public void RandomColor()
@@ -44,5 +56,28 @@ public class Mob : MonoBehaviour
 
         var renderer = enviromentParticle.GetComponent<ParticleSystemRenderer>();
         renderer.material.SetColor("_EmissionColor", color * emissionIntensity);
+
+        holeMeshRenderer.material.SetColor("_EmissionColor", color * emissionIntensity);
+
+        main = destroyParticle.main;
+        main.startColor = new ParticleSystem.MinMaxGradient(color, color * Random.Range(1f - arrangRage, 1f + arrangRage));
+
+        renderer = destroyParticle.GetComponent<ParticleSystemRenderer>();
+        renderer.material.SetColor("_EmissionColor", color * emissionIntensity);
+    }
+
+    public void Destroy()
+    {
+        if (isDestroyed) return;
+        isDestroyed = true;
+
+        destroyParticle.Play();
+        destroyAudio.Play();
+
+        enviromentParticle.Stop();
+        agent.enabled = false;
+        modelGameObject.SetActive(false);
+
+        Destroy(gameObject, destroyDelay);
     }
 }
