@@ -201,7 +201,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6869716271018885604}
         m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
