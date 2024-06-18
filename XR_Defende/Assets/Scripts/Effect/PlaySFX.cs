@@ -7,7 +7,7 @@ public class PlaySFX : MonoBehaviour
     public float minPitch = 0.8f;
     public float maxPitch = 1.2f;
 
-    public AudioSource target;
+    private AudioSource target;
 
     private void Awake()
     {
