@@ -15,8 +15,12 @@ public class Shooter : MonoBehaviour
 
     public UnityEvent<Vector3> OnShootSuccess; //총 발사를 성공했을때의 위치 정보 저장
     public UnityEvent OnShootFail; // 실패시에 이벤트
+    public Magazine magazine;
 
-
+    private void Awake()
+    {
+        magazine  = GetComponent<Magazine>();
+    }
     private void Start()
     {
         Stop();
@@ -37,7 +41,16 @@ public class Shooter : MonoBehaviour
     {
         while (true)
         {
-            Shoot();
+            if (magazine.Use())
+            {
+                Shoot();
+            }
+            else
+            {
+                // 총알이 부족할때 들어옴
+                OnShootFail?.Invoke();
+            }
+
             yield return null;
         }
     }
