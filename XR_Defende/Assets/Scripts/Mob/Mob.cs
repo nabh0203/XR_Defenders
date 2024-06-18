@@ -29,14 +29,6 @@ public class Mob : MonoBehaviour
     {
         if (isDestroyed) return;
         isDestroyed = true;
-
-        //destroyParticle.Play();
-        //destroyAudio.Play();
-
-        //enviromentParticle.Stop();
-        //agent.enabled = false;
-        //modelGameObject.SetActive(false);
-
         Destroy(gameObject, destroyDelay);
 
         OnDestroyed?.Invoke();
