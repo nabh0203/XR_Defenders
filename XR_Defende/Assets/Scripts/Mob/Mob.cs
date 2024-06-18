@@ -19,8 +19,6 @@ public class Mob : MonoBehaviour
 
         //테스트용 코드
 
-        Invoke(nameof(Destroy), 3f);
-
         OnCreated?.Invoke();
     }
 
