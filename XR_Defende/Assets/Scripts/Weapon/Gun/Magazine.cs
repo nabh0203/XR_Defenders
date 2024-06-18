@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Magazine : MonoBehaviour
+public class Magazine : MonoBehaviour,IReloadable
 {
     public int maxBullets = 20; // 최대 총알 개수
     public float chargingTime = 2f; // 충전하는데 시간
@@ -49,7 +49,7 @@ public class Magazine : MonoBehaviour
         }
     }
 
-    [ContextMenu("Reload")]
+    //[ContextMenu("Reload")]
     public void StartReload()
     {
         if(CurrentBullets == maxBullets) return; // 재장전 할 필요가 없으면 리턴
