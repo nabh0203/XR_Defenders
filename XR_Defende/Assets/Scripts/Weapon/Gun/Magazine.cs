@@ -49,6 +49,7 @@ public class Magazine : MonoBehaviour
         }
     }
 
+    [ContextMenu("Reload")]
     public void StartReload()
     {
         if(CurrentBullets == maxBullets) return; // 재장전 할 필요가 없으면 리턴
