@@ -19,7 +19,7 @@ public class ActivateOnLookAt : MonoBehaviour
     }
     private void Update()
     {
-        var dir = target.transform.position - camera.transform.position; // 카메라가 타겟을 쳐다보고 있는 것으 ㄹ께산하기 위한 vector값
+        var dir = target.transform.position - camera.transform.position; // 카메라가 타겟을 쳐다보고 있는 것으 계산하기 위한 vector값
         var angle = Vector3.Angle(camera.transform.forward, dir); // 카메라를 기준으로 몇도가 돌아가 있는지 계산
 
         if(angle <= thresholdAngel)
