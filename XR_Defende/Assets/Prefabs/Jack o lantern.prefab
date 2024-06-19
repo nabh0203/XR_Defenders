@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6749088570265659229}
   - component: {fileID: 4523941609379988381}
   - component: {fileID: 234519325316212576}
-  - component: {fileID: 7682017049172750485}
+  - component: {fileID: 6884533209108862115}
   - component: {fileID: 8697763597314629425}
   - component: {fileID: 6093556416705069954}
   - component: {fileID: 8872880622501884128}
@@ -90,8 +90,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7682017049172750485}
-        m_TargetAssemblyTypeName: ChangeAgentDestination, Assembly-CSharp
+      - m_Target: {fileID: 6884533209108862115}
+        m_TargetAssemblyTypeName: ChangeAgentDestinationToCore, Assembly-CSharp
         m_MethodName: Call
         m_Mode: 1
         m_Arguments:
@@ -272,7 +272,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7682017049172750485
+--- !u!114 &6884533209108862115
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -281,10 +281,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 545627751208007252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c8d5ff43e4de6c41a3f59d2c356fb2b, type: 3}
+  m_Script: {fileID: 11500000, guid: 92f89d2d55d78994a9d3ccb7fcb62cbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {x: 0, y: 2, z: 1}
 --- !u!114 &8697763597314629425
 MonoBehaviour:
   m_ObjectHideFlags: 0
