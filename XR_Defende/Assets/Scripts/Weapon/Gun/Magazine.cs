@@ -74,7 +74,7 @@ public class Magazine : MonoBehaviour,IReloadable
         while (true) 
         { 
             var t  = (Time.time - beginTime) / needCahrgingTime;  //진행된 시간을 충전에 필요한 시간으로 나누면 몇프로가 남았는지 확인            
-            if (t >= 1) break; // 1보다 크면 종료
+            if (t >= 1f) break; // 1보다 크면 종료
 
             CurrentBullets += (int)Mathf.Lerp(beginBullets, maxBullets, t); // 
             yield return null;
