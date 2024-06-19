@@ -20,6 +20,7 @@ public class Mob : MonoBehaviour
         //테스트용 코드
 
         OnCreated?.Invoke();
+        MobManager.Instance.OnSpawned(this);
     }
 
 
@@ -30,5 +31,7 @@ public class Mob : MonoBehaviour
         Destroy(gameObject, destroyDelay);
 
         OnDestroyed?.Invoke();
+
+        MobManager.Instance.OnDestroyed(this);
     }
 }
