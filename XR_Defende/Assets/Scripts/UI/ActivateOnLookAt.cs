@@ -20,12 +20,12 @@ public class ActivateOnLookAt : MonoBehaviour
     private void Update()
     {
         var dir = target.transform.position - camera.transform.position; // 카메라가 타겟을 쳐다보고 있는 것으 ㄹ께산하기 위한 vector값
-        var angle = Vector3.Angle(camera.transform.position, dir); // 카메라를 기준으로 몇도가 돌아가 있는지 계산
+        var angle = Vector3.Angle(camera.transform.forward, dir); // 카메라를 기준으로 몇도가 돌아가 있는지 계산
 
         if(angle <= thresholdAngel)
         {
             //쳐다보고 있는 상태
-            if(!isLooking )
+            if(!isLooking)
             {
                 isLooking = true;
                 showingTime = Time.time * thresholdDuration;
@@ -33,7 +33,7 @@ public class ActivateOnLookAt : MonoBehaviour
             else
             {
                 // 타겟 ui가 꺼져있고, 현재시간이 최초에 Looking을 판별한 시점부터 2초뒤보다 더 커져 있으면
-                if(target.enabled && Time.time >= showingTime)
+                if(!target.enabled && Time.time >= showingTime)
                 {
                     target.enabled = true;
                 }
