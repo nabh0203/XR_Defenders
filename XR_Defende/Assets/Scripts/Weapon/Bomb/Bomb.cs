@@ -47,6 +47,7 @@ public class Bomb : MonoBehaviour
         if (state == State.Idle) return;
 
         StopAllCoroutines();
+        state = State.Idle;
         Explosion();
     }
     private void Explosion()

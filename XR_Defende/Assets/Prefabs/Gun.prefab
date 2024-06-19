@@ -1088,10 +1088,60 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7037018272433051531}
     m_Modifications:
+    - target: {fileID: 338285678168329550, guid: cfb71705f2405af489ce19291fc1be74,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 338285678168329550, guid: cfb71705f2405af489ce19291fc1be74,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 338285678168329550, guid: cfb71705f2405af489ce19291fc1be74,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 338285678168329550, guid: cfb71705f2405af489ce19291fc1be74,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 338285678168329550, guid: cfb71705f2405af489ce19291fc1be74,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key1.g
+      value: 0.9451673
+      objectReference: {fileID: 0}
+    - target: {fileID: 338285678168329550, guid: cfb71705f2405af489ce19291fc1be74,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 338285678168329550, guid: cfb71705f2405af489ce19291fc1be74,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.m_ColorSpace
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1249520843692078813, guid: cfb71705f2405af489ce19291fc1be74,
         type: 3}
       propertyPath: m_Name
       value: Shoot Effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 3176849355949028746, guid: cfb71705f2405af489ce19291fc1be74,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3176849355949028746, guid: cfb71705f2405af489ce19291fc1be74,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.6083125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3176849355949028746, guid: cfb71705f2405af489ce19291fc1be74,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.7169812
       objectReference: {fileID: 0}
     - target: {fileID: 7441364334785320361, guid: cfb71705f2405af489ce19291fc1be74,
         type: 3}
